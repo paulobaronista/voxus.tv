@@ -3,6 +3,9 @@ sans-serif;
 $bg: #F5F7FA;
 $branco: #ffffff;
 $cinza: #748296;
+$cinza-escuro: #2D3A40;
+$azul: #326FFF;
+$preto: #000000;
 body {
     background: url(../img/Illustration.png) center bottom no-repeat $bg;
 }
@@ -14,9 +17,118 @@ header {
     padding: 17px 0;
 }
 
+// main
+main {
+    h4,
+    p {
+        font-family: $font;
+        font-style: normal;
+    }
+    h4 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 42px;
+        color: $cinza-escuro;
+        margin-top: 60px;
+        &+p {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 26px;
+            color: $cinza;
+        }
+    }
+    // form 
+    .form {
+        background-color: $branco;
+        box-shadow: 0px 4px 40px rgba(116, 130, 150, 0.2);
+        border-radius: 3px;
+        margin-top: 73px;
+        & form {
+            margin-top: 27px;
+            & .form-group {
+                position: relative;
+                margin-bottom: 30px;
+                & label,
+                & .form-control {
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 16px;
+                }
+                & label {
+                    -webkit-transition: all 0.3s ease;
+                    -moz-transition: all 0.3s ease;
+                    -ms-transition: all 0.3s ease;
+                    -o-transition: all 0.3s ease;
+                    transition: all 0.3s ease;
+                    color: rgba(45, 58, 64, 0.3);
+                    position: absolute;
+                    top: 10px;
+                    left: 25px;
+                }
+                & .form-control {
+                    border: 1px solid rgba(116, 130, 150, 0.2);
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    color: $preto;
+                    &:focus {
+                        box-shadow: none;
+                        border: 1px solid #326FFF;
+                        box-sizing: border-box;
+                    }
+                }
+                & .form-control:focus+label,
+                & .active+label {
+                    font-size: 14px;
+                    line-height: 14px;
+                    top: -7px;
+                    left: 20px;
+                    background-color: $branco;
+                    padding: 0 5px;
+                }
+                & .form-control:focus+label {
+                    color: $cinza-escuro;
+                }
+                & .active+label {
+                    color: rgba(45, 58, 64, 0.3);
+                    position: absolute;
+                }
+            }
+            & .phone {
+                & select {
+                    border-right: none;
+                    border-radius: 0px;
+                    -webkit-border-top-left-radius: .25rem;
+                    -webkit-border-bottom-left-radius: .25rem;
+                    -moz-border-radius-topleft: .25rem;
+                    -moz-border-radius-bottomleft: .25rem;
+                    border-top-left-radius: .25rem;
+                    border-bottom-left-radius: .25rem;
+                    &:focus {
+                        box-shadow: none;
+                        border: 1px solid #326FFF;
+                        box-sizing: border-box;
+                    }
+                }
+                & #telefone {
+                    border-radius: 0px;
+                    -webkit-border-top-right-radius: .25rem;
+                    -webkit-border-bottom-right-radius: .25rem;
+                    -moz-border-radius-topright: .25rem;
+                    -moz-border-radius-bottomright: .25rem;
+                    border-top-right-radius: .25rem;
+                    border-bottom-right-radius: .25rem;
+                }
+            }
+        }
+    }
+}
+
 // rodape
 footer {
     padding-bottom: 47px;
+    margin-top: 166px;
     & .container {
         border-top: 2px solid rgba(0, 0, 0, 0.1);
         & .nav-link {
@@ -33,6 +145,15 @@ footer {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+    // main
+    main {
+        h4 {
+            font-size: 24px;
+            line-height: 32px;
+            margin-top: 50px;
+        }
+    }
+    // rodape
     footer {
         & .container {
             padding-top: 20px;
