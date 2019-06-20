@@ -1,0 +1,59 @@
+$font: 'Roboto',
+sans-serif;
+$bg: #F5F7FA;
+$branco: #ffffff;
+$cinza: #748296;
+body {
+    background: url(../img/Illustration.png) center bottom no-repeat $bg;
+}
+
+// menu
+header {
+    background: $branco;
+    border-bottom: 1px solid rgba(45, 58, 64, 0.1);
+    padding: 17px 0;
+}
+
+// rodape
+footer {
+    padding-bottom: 47px;
+    & .container {
+        border-top: 2px solid rgba(0, 0, 0, 0.1);
+        & .nav-link {
+            font-family: $font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 14px;
+            color: $cinza;
+            padding: 18px 10px 0;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    footer {
+        & .container {
+            padding-top: 20px;
+            & .nav-item {
+                width: 100%;
+                & .nav-link {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

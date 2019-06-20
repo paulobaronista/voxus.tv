@@ -1,1 +1,1 @@
-.teste{color:red}
+body{background:url(../img/Illustration.png) center bottom no-repeat #F5F7FA}header{background:#fff;border-bottom:1px solid rgba(45,58,64,0.1);padding:17px 0}footer{padding-bottom:47px}footer .container{border-top:2px solid rgba(0,0,0,0.1)}footer .container .nav-link{font-family:"Roboto",sans-serif;font-style:normal;font-weight:normal;font-size:14px;line-height:14px;color:#748296;padding:18px 10px 0}@media (max-width: 575.98px){footer .container{padding-top:20px}footer .container .nav-item{width:100%}footer .container .nav-item .nav-link{padding:10px}}
