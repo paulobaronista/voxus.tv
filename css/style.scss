@@ -6,6 +6,9 @@ $cinza: #748296;
 $cinza-escuro: #2D3A40;
 $azul: #326FFF;
 $preto: #000000;
+$verde: #14E298;
+$verde-claro:#23F7AB;
+$rosa: #F0175C;
 body {
     background: url(../img/Illustration.png) center bottom no-repeat $bg;
 }
@@ -43,12 +46,20 @@ main {
         box-shadow: 0px 4px 40px rgba(116, 130, 150, 0.2);
         border-radius: 3px;
         margin-top: 73px;
+        padding-bottom: 60px;
         & form {
             margin-top: 27px;
             & .form-group {
                 position: relative;
                 margin-bottom: 30px;
-                & label,
+                & select {
+                    color: rgba(45, 58, 64, 0.3);
+                    &:focus,
+                    &:active {
+                        color: $preto;
+                    }
+                }
+                & span,
                 & .form-control {
                     font-family: $font;
                     font-style: normal;
@@ -56,7 +67,7 @@ main {
                     font-size: 16px;
                     line-height: 16px;
                 }
-                & label {
+                & span {
                     -webkit-transition: all 0.3s ease;
                     -moz-transition: all 0.3s ease;
                     -ms-transition: all 0.3s ease;
@@ -72,31 +83,48 @@ main {
                     box-sizing: border-box;
                     border-radius: 3px;
                     color: $preto;
+                    position: relative;
+                    z-index: 10;
+                    background-color: transparent;
                     &:focus {
                         box-shadow: none;
-                        border: 1px solid #326FFF;
+                        border: 1px solid $azul;
                         box-sizing: border-box;
                     }
                 }
-                & .form-control:focus+label,
-                & .active+label {
+                & .form-control:focus~span,
+                & .active~span {
                     font-size: 14px;
                     line-height: 14px;
                     top: -7px;
                     left: 20px;
                     background-color: $branco;
                     padding: 0 5px;
+                    z-index: 20;
                 }
-                & .form-control:focus+label {
+                & .form-control:focus~span {
                     color: $cinza-escuro;
                 }
-                & .active+label {
+                & .active~span {
                     color: rgba(45, 58, 64, 0.3);
                     position: absolute;
+                }
+                & label {
+                    font-family: $font;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 10px;
+                    line-height: 10px;
+                    background-color: $rosa;
+                    border-radius: 0px 0px 4px 4px;
+                    color: $branco;
+                    padding: 10px 20px;
+                    width: 90%;
                 }
             }
             & .phone {
                 & select {
+                    padding: 0;
                     border-right: none;
                     border-radius: 0px;
                     -webkit-border-top-left-radius: .25rem;
@@ -107,7 +135,7 @@ main {
                     border-bottom-left-radius: .25rem;
                     &:focus {
                         box-shadow: none;
-                        border: 1px solid #326FFF;
+                        border: 1px solid $azul;
                         box-sizing: border-box;
                     }
                 }
@@ -121,6 +149,59 @@ main {
                     border-bottom-right-radius: .25rem;
                 }
             }
+            & .btn-send,
+            & .btn-send-active {
+                font-family: $font;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 11px 20px;
+                box-sizing: border-box;
+                width: 100%;
+            }
+            & .btn-send {
+                background-color: $verde;
+                color: $branco;
+                &:hover {
+                    background-color: $verde-claro;
+                }
+            }
+            & .btn-send-active {
+                background-color: $branco;
+                color: $verde;
+                border: 1px solid $verde;
+                border-radius: 3px;
+                display: none;
+            }
+        }
+        & .return-one {
+            background: $bg;
+            border-radius: 4px;
+            padding: 15px 20px;
+            margin-top: 20px;
+            display: none;
+            & p {
+                font-family: $font;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 14px;
+                color: $cinza-escuro;
+                margin: 0;
+            }
+        }
+    }
+    & .return-two {
+        margin-top: 40px;
+        display: none;
+        & p {
+            font-family: $font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: $cinza;
         }
     }
 }
@@ -128,7 +209,7 @@ main {
 // rodape
 footer {
     padding-bottom: 47px;
-    margin-top: 166px;
+    margin-top: 100px;
     & .container {
         border-top: 2px solid rgba(0, 0, 0, 0.1);
         & .nav-link {
@@ -166,15 +247,3 @@ footer {
         }
     }
 }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767.98px) {}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991.98px) {}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}

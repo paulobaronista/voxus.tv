@@ -2,104 +2,125 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Processo Desenvolvedor Front-End">
-    <meta name="author" content="@paulobaronista">
-    <title>Voxus.tv</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Processo Desenvolvedor Front-End">
+  <meta name="author" content="@paulobaronista">
+  <title>Voxus.tv</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script src="js/validacao.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#">
-                    <img class="img-fluid" src="img/logo-voxus.png" alt="Logo Voxus">
-                </a>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div class="container">
+        <a href="#">
+          <img class="img-fluid" src="img/logo-voxus.png" alt="Logo Voxus">
+        </a>
+      </div>
+    </nav>
+  </header>
 
-    <main role="main">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-8 text-center">
-                    <h4>Você está a poucos passos de otimizar suas campanhas!</h4>
-                    <p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
+  <main role="main">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-8 text-center">
+          <h4>Você está a poucos passos de otimizar suas campanhas!</h4>
+          <p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-11 col-sm-7 form">
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-5">
+              <form id="signupForm" method="get" action="">
+                <div class="form-group">
+                  <input class="form-control" id="name" name="name" type="text" autocomplete="off">
+                  <span>Nome completo</span>
                 </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-11 col-sm-7 form">
-                    <div class="row justify-content-center">
-                        <div class="col-12 col-md-8 col-lg-5">
-                            <form class="needs-validation" novalidate>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="nome">
-                                    <label for="nome">Nome completo</label>
-                                </div>
-
-                                <div class="form-group phone">
-                                    <div class="row mx-0">
-                                        <div class="col-4 px-0">
-                                            <select class="custom-select" id="paises">
-                                            <option value="1" id="br">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
-                                         </select>
-                                        </div>
-                                        <div class="col-8 px-0">
-                                            <input type="text" class="form-control" id="telefone">
-                                            <label for="telefone">Telefone</label>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email">
-                                    <label for="email">Endereço de e-mail</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="empresa">
-                                    <label for="empresa">Nome da empresa</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="url">
-                                    <label for="url">URL do site</label>
-                                </div>
-
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
-                            </form>
-                        </div>
+                <div class="form-group phone">
+                  <div class="row mx-0">
+                    <div class="col-3 px-0">
+                      <select class="custom-select" id="paises" name="paises" autocomplete="off">
+                        <option value="+55">+55</option>
+                        <option value="+54">+54</option>
+                        <option value="+591">+591</option>
+                        <option value="+57">+57</option>
+                        <option value="+81">+81</option>
+                      </select>
                     </div>
+                    <div class="col-9 px-0">
+                      <input type="text" class="form-control" id="telefone" name="telefone" autocomplete="off">
+                      <span>Telefone</span>
+                    </div>
+                  </div>
                 </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" name="email" autocomplete="off">
+                  <span>Endereço de e-mail</span>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="empresa" name="empresa" autocomplete="off">
+                  <span>Nome da empresa</span>
+                </div>
+                <div class="form-group">
+                  <input type="url" class="form-control" id="url" name="url" autocomplete="off">
+                  <span>URL do site</span>
+                </div>
+                <div class="form-group">
+                  <select class="custom-select" id="verba" name="verba" autocomplete="off">
+                    <option value="" disabled selected>Verba mensal em mídia</option>
+                    <option value="1">
+                      <= R$5.000</option> <option value="2">>= R$5.001 e <= R$30.000</option> <option value="3">>=
+                          R$30.001 e <= R$100.000</option> <option value="4">>= R$100.001 e <= R$500.000</option>
+                              <option value="5">>= R$500.001
+                    </option>
+                    <option value="6">Não se aplica</option>
+                  </select>
+                </div>
+                <button class="btn btn-send submit" type="submit">Experimentar gratuitamente</button>
+
+                <span class="btn btn-send-active display-item">Obrigado!</span>
+              </form>
             </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-11 col-lg-7 text-center return-one display-item">
+              <p>Entraremos em contato em até 24hs úteis.</p>
+            </div>
+          </div>
         </div>
-    </main>
+        <div class="col-12 col-lg-8 text-center return-two display-item">
+          <p>*Para usar o trial grátis você precisa ser um e-commerce e concordar com os termos e requisitos
+            do trial gratuito. Saiba mais em: <a href="">Termos e requisitos de trial gratuito</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
 
-    <footer>
-        <div class="container px-0">
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><img class="img-fluid" src="img/logo-voxus-footer.png" alt="Logo Voxus"></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Termos de serviço</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Política de privacidade</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Opções de anúncio</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/validacao.js"></script>
+  <footer>
+    <div class="container px-0">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><img class="img-fluid" src="img/logo-voxus-footer.png" alt="Logo Voxus"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Termos de serviço</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Política de privacidade</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Opções de anúncio</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 </body>
-
 </html>
